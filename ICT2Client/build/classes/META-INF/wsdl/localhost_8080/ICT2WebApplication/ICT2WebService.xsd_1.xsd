@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://server/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://server/">
+
+<xs:element name="Exception" type="tns:Exception"/>
+
+<xs:element name="addDoubleOnServer" type="tns:addDoubleOnServer"/>
+
+<xs:element name="addDoubleOnServerResponse" type="tns:addDoubleOnServerResponse"/>
+
+<xs:element name="getAllDoubleSamplesBelow" type="tns:getAllDoubleSamplesBelow"/>
+
+<xs:element name="getAllDoubleSamplesBelowResponse" type="tns:getAllDoubleSamplesBelowResponse"/>
+
+<xs:element name="getSmallestDouble" type="tns:getSmallestDouble"/>
+
+<xs:element name="getSmallestDoubleResponse" type="tns:getSmallestDoubleResponse"/>
+
+<xs:element name="product" type="tns:product"/>
+
+<xs:element name="productResponse" type="tns:productResponse"/>
+
+<xs:element name="safeProduct" type="tns:safeProduct"/>
+
+<xs:element name="safeProductResponse" type="tns:safeProductResponse"/>
+
+<xs:element name="testConnection" type="tns:testConnection"/>
+
+<xs:element name="testConnectionResponse" type="tns:testConnectionResponse"/>
+
+<xs:complexType name="safeProduct">
+<xs:sequence>
+<xs:element name="d1" type="xs:double" minOccurs="0"/>
+<xs:element name="d2" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="safeProductResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Exception">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="product">
+<xs:sequence>
+<xs:element name="d1" type="xs:double" minOccurs="0"/>
+<xs:element name="d2" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="productResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllDoubleSamplesBelow">
+<xs:sequence>
+<xs:element name="d" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllDoubleSamplesBelowResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:anyType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSmallestDouble">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getSmallestDoubleResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="testConnection">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="testConnectionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addDoubleOnServer">
+<xs:sequence>
+<xs:element name="d" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addDoubleOnServerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
